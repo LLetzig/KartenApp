@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">KartenApp</string>
+    <string name="statistik">Statistik</string>
+    <string name="men">Menü</string>
+    <string name="richtig">richtig</string>
+    <string name="falsch">falsch</string>
+    <string name="w_hle_welche_karten_du_lernen_m_chtest">Wähle welche Karten du lernen möchtest.</string>
+    <string name="planen_vorbereiten_durchf_hren">Planen,Vorbereiten,Durchführen</string>
+    <string name="kundenberatung_und_information">Kundenberatung und Information</string>
+    <string name="beurteilen_marktg_ngiger_it_syteme">Beurteilen marktgängiger IT-Syteme</string>
+    <string name="entwickeln_betreuen_erstellen_von_it_l_sungen">Entwickeln, betreuen, erstellen von IT-Lösungen</string>
+    <string name="qualit_tssichernde_ma_nahmen">Qualitätssichernde Maßnahmen</string>
+    <string name="it_sicherheit_datenschutz_ergonomie">IT-Sicherheit, Datenschutz, Ergonomie</string>
+    <string name="auftragsabschluss_und_leistungserbringung">Auftragsabschluss und Leistungserbringung</string>
+    <string name="stats">Stats</string>
+    <string name="alle_karten">Alle Karten</string>
+    <string name="berf_llige_karten">Überfällige Karten</string>
+</resources>

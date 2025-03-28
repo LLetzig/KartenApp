@@ -27,14 +27,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private boolean showingQuestion = true;
     private Karte currentKarte;
 
-    ArrayList<Karte> receivedList = (ArrayList<Karte>) getIntent().getSerializableExtra("kartenListe");
-
+    ArrayList<Karte> receivedList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         //button binden und überwachen
+        receivedList = (ArrayList<Karte>) getIntent().getSerializableExtra("kartenListe");
+
         btnFalsch = findViewById(R.id.btnFalsch);
         btnFalsch.setOnClickListener(this);
         btnRichtig = findViewById(R.id.btnRichtig);
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.e("MainActivity", "ImageView is null! Check your XML layout.");
             return;
         }
-
+        // existiert datenbank?
         DBHelper dbHelper = new DBHelper(this);
         dbHelper.initializeDatabase();
 
@@ -93,6 +94,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         DBManager db = new DBManager(this);
         db.open();  // Open database connection
+        //update der des Kartenobjektes + db
         if (v.getId() == btnFalsch.getId()) {
 
 

@@ -23,15 +23,14 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        // This is normally called only when the database is first created.
-        // Since we are copying from assets, we don't define table creation here.
+        // db wird in emulator/mobiltelefon kopiert. desshalb leer
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // Handle database upgrades if needed.
     }
-    //kopiet datenbank falls datenbank und tabelle nicht existiert (wonky fix falls leere db erstellt)
+    //kopiert datenbank falls datenbank und tabelle nicht existiert (wonky fix falls leere db erstellt)
     public void initializeDatabase() {
         if (!databaseExists() || !tableExists()) {
             Log.d("DatabaseHelper", "Database missing or table 'karte' not found. Copying database...");
